@@ -193,6 +193,8 @@ public class JobLookupService {
 			}
 			
 		    JSONArray jsonarray = new JSONArray(output);
+		    if(workerId > jsonarray.length())
+		    	return null;
 	        JSONObject jsonobject = jsonarray.getJSONObject(workerId);
 	        
 
